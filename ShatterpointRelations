@@ -1,112 +1,200 @@
-import tkinter as tk
-from PIL import Image, ImageTk
-import urllib.request
-import io
-
-keywords = {
-    "Galactic Republic": ["Obi-Wan", "Anakin"],
-    "Jedi": ["Obi-Wan", "Anakin"],
-    "Sith": ["Anakin"]
+{
+  "Lord Maul": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1680722008/unitcards/sm4nemfv4palry4csive.png",
+    "keywords": [ "Dathomirian", "Force User", "Scoundrel", "Shadow Collective" ],
+    "interactions": [ "" ],
+    "unit_type": "Primary"
+  },
+  "Assaj Ventress, Sith Assassin": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1679453019/unitcards/snr1st3752cn950c2iah.png",
+    "keywords": [ "Dathomirian", "Force User", "Nightsister", "Separatist Alliance" ],
+    "interactions": [ "Dathomirian", "Separatist Alliance" ],
+    "unit_type": "Primary"
+  },
+  "Count Dooku, Separatist Leader": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1683739660/unitcards/qsw3hl2ydcath1j1kpmx.png",
+    "keywords": [ "Force User", "Separatist Alliance", "Sith" ],
+    "interactions": [ "Separatist Alliance" ],
+    "unit_type": "Primary"
+  },
+  "Grand Inquisitor, Fallen Jedi": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1686684318/unitcards/urhahpjncollyswshtwc.png",
+   "keywords": [ "Force User", "Galactic Empire", "Inquisitorius" ],
+    "interactions": [ "Inquisitorius" ],
+    "unit_type": "Primary"
+  },
+  "Ahsoka Tano, Jedi no more": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1680111711/unitcards/xwsqnz1nxnea4lkwexp8.png",
+    "keywords": [ "Force User", "Galactic Republic" ],
+    "interactions": [ "" ],
+    "unit_type": "Primary"
+  },
+  "General Obi-Wan Kenobi": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1683567782/unitcards/raqvvvh4eol6muxu7rkk.png",
+    "keywords": [ "212th", "Force User", "Galactic Republic", "Jedi" ],
+    "interactions": [ "Galactic Republic" ],
+    "unit_type": "Primary"
+  },
+  "212th Clone Troopers": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1684352441/unitcards/yakt7f0lbkdptiauzb1k.png",
+    "keywords": [ "212th", "Clone Trooper", "Galactic Republic", "Trooper" ],
+    "interactions": [ "Galactic Republic" ],
+    "unit_type": "Support"
+  },
+  "Republic Clone Commandos": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1685562315/unitcards/hmnaevy1q7rw4n7kzavf.png",
+    "keywords": [ "Clone Commando", "Clone Trooper", "Galactic Republic", "Trooper" ],
+    "interactions": [ "Galactic Republic" ],
+    "unit_type": "Support"
+  },
+  "Jedi Master Luminara Unduli": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1684867704/unitcards/ztzyzfbdwzoqudlxcka0.png",
+    "keywords": [ "Force User", "Galactic Republic", "Jedi" ],
+    "interactions": [ "Galactic Republic", "Support" ],
+    "unit_type": "Primary"
+  },
+  "General Grievous": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1685474797/unitcards/plpbxig4geb60tbzf9z8.png",
+    "keywords": [ "Droid", "Separatist Alliance" ],
+    "interactions": [ "Battle Droid" ],
+    "unit_type": "Primary"
+  },
+  "General Anakin Skywalker": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1679453002/unitcards/vt45t7yk9zopqn2cqo66.png",
+    "keywords": [ "501st", "Force User", "Galactic Republic", "Jedi" ],
+    "interactions": [ "Galactic Republic" ],
+    "unit_type": "Primary"
+  },
+  "Darth Vader, Jedi Hunter": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687199419/unitcards/lh3awzgnsbw8v8mhrdxp.png",
+    "keywords": [ "Force User", "Galactic Republic", "Galactic Empire", "Inquisitorius", "Sith" ],
+    "interactions": [ "" ],
+    "unit_type": "Primary"
+  },
+  "Mother Talzin": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687799963/unitcards/knlekdlh1ujqd3yp8ehu.png",
+    "keywords": [ "Dathomirian", "Force User", "Nightsister" ],
+    "interactions": [ "Dathomirian" ],
+    "unit_type": "Primary"
+  },
+  "Gar Saxon, Merciless Commander": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1682963235/unitcards/gs2q4o5t4dyvknwchqk7.png",
+    "keywords": [ "Mandalorian", "Shadow Collective", " Super Commando" ],
+    "interactions": [ "Mandalorian" ],
+    "unit_type": "Secondary"
+  },
+  "Obi-Wan Kenobi, Out of Hiding": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687199394/unitcards/w9u218ysek09jahe4s0p.png",
+    "keywords": [ "Foce User", " Jedi" ],
+    "interactions": [ "" ],
+    "unit_type": "Secondary"
+  },
+  "Third Sister": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1686684332/unitcards/kxgr9m9elx6dctqs1mhl.png",
+    "keywords": [ "Foce User", "Galactic Empire", "Inquisitorius" ],
+    "interactions": [ "Inquisitorius", "Support" ],
+    "unit_type": "Secondary"
+  },
+  "Jango Fett, Bounty Hunter": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1684327106/unitcards/vv6lmetu47oyqamxghpe.png",
+    "keywords": [ "Bounty Hunter", "Mercenary", "Scoundrel", "Separatist Alliance" ],
+    "interactions": [ "" ],
+    "unit_type": "Secondary"
+  },
+  "CC-2224 Clone Commander Cody": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1684352428/unitcards/lurmidy5ipsmxttormp1.png",
+    "keywords": [ "212th", "Clone Commando", "Clone Trooper", "Galactic Republic" ],
+    "interactions": [ "Galactic Republic", "Support" ],
+    "unit_type": "Secondary"
+  },
+  "Bo-Katan Kryze": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1681754569/unitcards/rnph8t12oqxoqt6agery.png",
+    "keywords": [ "Clan Kryze", "Death Watch", "Mandalorian", "Nite Owls" ],
+    "interactions": [ "Mandalorian" ],
+    "unit_type": "Secondary"
+  },
+  "Padawan Ahsoka Tano": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1685731176/unitcards/xinhkhcps6ca4vwq1qdb.jpg",
+    "keywords": [ "Foce User", "Galactic Republic", "Jedi", "Padawan" ],
+    "interactions": [ "Galactic Republic", "Primary", "Support" ],
+    "unit_type": "Secondary"
+  },
+  "Barriss Offee, Jedi Padawan": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1684867723/unitcards/bznrcq2tjk7iaaskp46a.png",
+    "keywords": [ "Foce User", "Galactic Republic", "Jedi", "Padawan" ],
+    "interactions": [ "Galactic Republic", "Jedi" ],
+    "unit_type": "Secondary"
+  },
+  "CC-7567 Capitain Rex": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1681146548/unitcards/r6o3mlt4psafpwus7qdl.png",
+    "keywords": [ "501st", "Clone Trooper", "Galactic Republic" ],
+    "interactions": [ "Clone Trooper" ],
+    "unit_type": "Secondary"
+  },
+  "Kalani, Super Tactical Droid": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1682356724/unitcards/r0jkm2lpablmvcutozzg.png",
+    "keywords": [ "Battle Droid", "Droid", "Separatist Alliance" ],
+    "interactions": [ "Battle Droid" ],
+    "unit_type": "Secondary"
+  },
+  "Kraken, Supper Tactical Droid": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1686078967/unitcards/iqvrfonnoljklrzgkmo7.png",
+    "keywords": [ "Battle Droid", "Droid", "Separatist Alliance" ],
+    "interactions": [ "Battle Droid" ],
+    "unit_type": "Secondary"
+  },
+  "Mandalorian Super Commandos": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1682963261/unitcards/taiipvwyvw5l9dosp6bk.png",
+    "keywords": [ "Mandalorians", "Shadow Collective", "Supper Commando", "Trooper" ],
+    "interactions": [ "Mandalorian" ],
+    "unit_type": "Support"
+  },
+  "MagnaGuard": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1683739747/unitcards/xaakxuzr1fmgdydnnept.png",
+    "keywords": [ "Battle Droid", "Droid", "Separatist Alliance", "Trooper" ],
+    "interactions": [ "Separatist Alliance", "Primary" ],
+    "unit_type": "Support"
+  },
+  "B1 Battle Droids": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1682356742/unitcards/ofvsaxingevo3agrhdi9.png",
+    "keywords": [ "B1", "Battle Droid", "Droid", "Separatist Alliance", "Trooper" ],
+    "interactions": [ "Battle Droid" ],
+    "unit_type": "Support"
+  },
+  "B2 Battle Droids": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1686078946/unitcards/dl8aq7hunnigaomnotkd.png",
+    "keywords": [ "B2", "Battle Droid", "Droid", "Separatist Alliance", "Trooper" ],
+    "interactions": [ "" ],
+    "unit_type": "Support"
+  },
+  "501st Clone Troopers": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1681146577/unitcards/ho1dtdg44ppe2pimr8xc.png",
+    "keywords": [ "501st", "Clone Trooper", "Galactic Republic", "Trooper" ],
+    "interactions": [ "Galactic Republic" ],
+    "unit_type": "Support"
+  },
+  "Clan Kryze Mandalorians": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1681754591/unitcards/rix0watwqixtsif92tnt.png",
+    "keywords": [ "Mandalorian", "Death Watch", "Clan Kryze", "Trooper" ],
+    "interactions": [ "Mandalorian" ],
+    "unit_type": "Support"
+  },
+  "Fith Brother": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687287915/unitcards/p60wdx1t9kyirtjxwk5x.png",
+    "keywords": [ "Force User", "Galactic Empire", "Inquisitorius" ],
+    "interactions": [ "Inquisitorius" ],
+    "unit_type": "Support"
+  },
+  "Fourth Sister": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687287929/unitcards/lky6uqez6mtjmbqmblyw.png",
+    "keywords": [ "Force User", "Galactic Empire", "Inquisitorius" ],
+    "interactions": [ "Inquisitorius" ],
+    "unit_type": "Support"
+  },
+  "Nightsisters Acolytes": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687799945/unitcards/cw47je12yjplxsysormd.png",
+    "keywords": [ "Dathomirian", "Nightsister", "Trooper" ],
+    "interactions": [ "Dathomirian" ],
+    "unit_type": "Support"
+  }
 }
-
-characters = {
-    "Obi-Wan": {
-        "picture": "example adress",
-        "keywords": ["Galactic Republic", "Jedi"]
-    },
-    "Anakin": {
-        "picture": "example adress",
-        "keywords": ["Galactic Republic", "Jedi", "Sith"]
-    }
-}
-
-def on_search():
-    # Get the text from the entry
-    character_name = entry.get()
-
-    # Look up the character's information
-    character_info = characters.get(character_name)
-    if character_info:
-        # Update the image label
-        image_url = character_info["picture"]
-        image_data = urllib.request.urlopen(image_url).read()
-        image = Image.open(io.BytesIO(image_data))
-        photo = ImageTk.PhotoImage(image)
-        image_label.config(image=photo)
-        image_label.image = photo
-
-        # Update the listbox
-        listbox.delete(0, tk.END)
-        for keyword in character_info["keywords"]:
-            matching_characters = keywords.get(keyword, [])
-            for matching_character in matching_characters:
-                # Only insert the character if it is not the selected character
-                if matching_character != character_name:
-                    listbox.insert(tk.END, matching_character)
-
-# Create the main window
-root = tk.Tk()
-
-# Create the entry for character name input
-entry = tk.Entry(root)
-entry.pack(side=tk.TOP, anchor=tk.W)
-
-# Create the button to trigger the search
-button = tk.Button(root, text="Search", command=on_search)
-button.pack(side=tk.TOP, anchor=tk.W)
-
-# Create the label to display the character image
-image_label = tk.Label(root)
-image_label.pack(side=tk.TOP, anchor=tk.W)
-
-# Create the listbox to display matching characters
-listbox = tk.Listbox(root)
-listbox.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
-
-
-# Start the main loop
-root.mainloop()
-
-
-def on_listbox_select(event):
-    # Get the currently selected item in the listbox
-    selection = listbox.curselection()
-    if selection:
-        index = selection[0]
-        character_name = listbox.get(index)
-
-        # Look up the character's information
-        character_info = characters.get(character_name)
-        if character_info:
-            # Update the image label
-            image_url = character_info["picture"]
-            image_data = urllib.request.urlopen(image_url).read()
-            image = Image.open(io.BytesIO(image_data))
-            photo = ImageTk.PhotoImage(image)
-            image_label.config(image=photo)
-            image_label.image = photo
-
-
-# Bind the event handler to the listbox
-listbox.bind("<<ListboxSelect>>", on_listbox_select)
-
-
-root = tk.Tk()
-
-# Create the entry for character name input
-entry = tk.Entry(root)
-entry.pack(side=tk.TOP, anchor=tk.W)
-
-# Create the button to trigger the search
-button = tk.Button(root, text="Search", command=on_search)
-button.pack(side=tk.TOP, anchor=tk.W)
-
-# Create the label to display the character image
-image_label = tk.Label(root)
-image_label.pack(side=tk.TOP, anchor=tk.W)
-
-# Create the listbox to display matching characters
-listbox = tk.Listbox(root)
-listbox.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
-
-root.mainloop()
