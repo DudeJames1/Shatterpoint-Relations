@@ -3,14 +3,6 @@ from PIL import Image, ImageTk
 import urllib.request
 import io
 
-def on_search():
-    # Get the text from the entry
-    character_name = entry.get()
-
-    # TODO: Look up the character's information and update the UI
-    # For now, just display the character name in the listbox
-    listbox.insert(tk.END, character_name)
-
 keywords = {
     "Galactic Republic": ["Obi-Wan", "Anakin"],
     "Jedi": ["Obi-Wan", "Anakin"],
@@ -19,11 +11,11 @@ keywords = {
 
 characters = {
     "Obi-Wan": {
-        "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1683567782/unitcards/raqvvvh4eol6muxu7rkk.png",
+        "picture": "example adress",
         "keywords": ["Galactic Republic", "Jedi"]
     },
     "Anakin": {
-        "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1679453002/unitcards/vt45t7yk9zopqn2cqo66.png",
+        "picture": "example adress",
         "keywords": ["Galactic Republic", "Jedi", "Sith"]
     }
 }
