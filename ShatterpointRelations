@@ -1,0 +1,120 @@
+import tkinter as tk
+from PIL import Image, ImageTk
+import urllib.request
+import io
+
+def on_search():
+    # Get the text from the entry
+    character_name = entry.get()
+
+    # TODO: Look up the character's information and update the UI
+    # For now, just display the character name in the listbox
+    listbox.insert(tk.END, character_name)
+
+keywords = {
+    "Galactic Republic": ["Obi-Wan", "Anakin"],
+    "Jedi": ["Obi-Wan", "Anakin"],
+    "Sith": ["Anakin"]
+}
+
+characters = {
+    "Obi-Wan": {
+        "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1683567782/unitcards/raqvvvh4eol6muxu7rkk.png",
+        "keywords": ["Galactic Republic", "Jedi"]
+    },
+    "Anakin": {
+        "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1679453002/unitcards/vt45t7yk9zopqn2cqo66.png",
+        "keywords": ["Galactic Republic", "Jedi", "Sith"]
+    }
+}
+
+def on_search():
+    # Get the text from the entry
+    character_name = entry.get()
+
+    # Look up the character's information
+    character_info = characters.get(character_name)
+    if character_info:
+        # Update the image label
+        image_url = character_info["picture"]
+        image_data = urllib.request.urlopen(image_url).read()
+        image = Image.open(io.BytesIO(image_data))
+        photo = ImageTk.PhotoImage(image)
+        image_label.config(image=photo)
+        image_label.image = photo
+
+        # Update the listbox
+        listbox.delete(0, tk.END)
+        for keyword in character_info["keywords"]:
+            matching_characters = keywords.get(keyword, [])
+            for matching_character in matching_characters:
+                # Only insert the character if it is not the selected character
+                if matching_character != character_name:
+                    listbox.insert(tk.END, matching_character)
+
+# Create the main window
+root = tk.Tk()
+
+# Create the entry for character name input
+entry = tk.Entry(root)
+entry.pack(side=tk.TOP, anchor=tk.W)
+
+# Create the button to trigger the search
+button = tk.Button(root, text="Search", command=on_search)
+button.pack(side=tk.TOP, anchor=tk.W)
+
+# Create the label to display the character image
+image_label = tk.Label(root)
+image_label.pack(side=tk.TOP, anchor=tk.W)
+
+# Create the listbox to display matching characters
+listbox = tk.Listbox(root)
+listbox.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
+
+
+# Start the main loop
+root.mainloop()
+
+
+def on_listbox_select(event):
+    # Get the currently selected item in the listbox
+    selection = listbox.curselection()
+    if selection:
+        index = selection[0]
+        character_name = listbox.get(index)
+
+        # Look up the character's information
+        character_info = characters.get(character_name)
+        if character_info:
+            # Update the image label
+            image_url = character_info["picture"]
+            image_data = urllib.request.urlopen(image_url).read()
+            image = Image.open(io.BytesIO(image_data))
+            photo = ImageTk.PhotoImage(image)
+            image_label.config(image=photo)
+            image_label.image = photo
+
+
+# Bind the event handler to the listbox
+listbox.bind("<<ListboxSelect>>", on_listbox_select)
+
+
+root = tk.Tk()
+
+# Create the entry for character name input
+entry = tk.Entry(root)
+entry.pack(side=tk.TOP, anchor=tk.W)
+
+# Create the button to trigger the search
+button = tk.Button(root, text="Search", command=on_search)
+button.pack(side=tk.TOP, anchor=tk.W)
+
+# Create the label to display the character image
+image_label = tk.Label(root)
+image_label.pack(side=tk.TOP, anchor=tk.W)
+
+# Create the listbox to display matching characters
+listbox = tk.Listbox(root)
+listbox.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
+
+root.mainloop()
