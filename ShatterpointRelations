@@ -85,13 +85,13 @@
   },
   "Obi-Wan Kenobi, Out of Hiding": {
     "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687199394/unitcards/w9u218ysek09jahe4s0p.png",
-    "keywords": [ "Foce User", " Jedi" ],
+    "keywords": [ "Force User", " Jedi" ],
     "interactions": [ "" ],
     "unit_type": "Secondary"
   },
   "Third Sister": {
     "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1686684332/unitcards/kxgr9m9elx6dctqs1mhl.png",
-    "keywords": [ "Foce User", "Galactic Empire", "Inquisitorius" ],
+    "keywords": [ "Force User", "Galactic Empire", "Inquisitorius" ],
     "interactions": [ "Inquisitorius", "Support" ],
     "unit_type": "Secondary"
   },
@@ -115,13 +115,13 @@
   },
   "Padawan Ahsoka Tano": {
     "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1685731176/unitcards/xinhkhcps6ca4vwq1qdb.jpg",
-    "keywords": [ "Foce User", "Galactic Republic", "Jedi", "Padawan" ],
+    "keywords": [ "Force User", "Galactic Republic", "Jedi", "Padawan" ],
     "interactions": [ "Galactic Republic", "Primary", "Support" ],
     "unit_type": "Secondary"
   },
   "Barriss Offee, Jedi Padawan": {
     "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1684867723/unitcards/bznrcq2tjk7iaaskp46a.png",
-    "keywords": [ "Foce User", "Galactic Republic", "Jedi", "Padawan" ],
+    "keywords": [ "Force User", "Galactic Republic", "Jedi", "Padawan" ],
     "interactions": [ "Galactic Republic", "Jedi" ],
     "unit_type": "Secondary"
   },
@@ -196,5 +196,11 @@
     "keywords": [ "Dathomirian", "Nightsister", "Trooper" ],
     "interactions": [ "Dathomirian" ],
     "unit_type": "Support"
+  },
+  "Jedi Master Mace Windu": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1688580601/unitcards/wl27we20haoojutet3jx.png",
+    "keywords": [ "Force User","Galactic Republic", "Jedi" ],
+    "interactions": [ "Galactic Republic" ],
+    "unit_type": "Primary"
   }
 }
