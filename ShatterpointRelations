@@ -145,7 +145,7 @@
   },
   "Mandalorian Super Commandos": {
     "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1682963261/unitcards/taiipvwyvw5l9dosp6bk.png",
-    "keywords": [ "Mandalorians", "Shadow Collective", "Supper Commando", "Trooper" ],
+    "keywords": [ "Mandalorian", "Shadow Collective", "Supper Commando", "Trooper" ],
     "interactions": [ "Mandalorian" ],
     "unit_type": "Support"
   },
