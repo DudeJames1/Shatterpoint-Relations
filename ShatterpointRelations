@@ -202,11 +202,5 @@
     "keywords": [ "Force User","Galactic Republic", "Jedi" ],
     "interactions": [ "Galactic Republic" ],
     "unit_type": "Primary"
-  },
-  "Savage Opress": {
-    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1689133069/unitcards/wiqlgevlz7fdkcujaj73.png",
-    "keywords": [ "Dathomirian", "Force User", "Sith", "Separatist Alliance" ],
-    "interactions": [ "Dathomirian", "Separatist Alliance" ],
-    "unit_type": "Secondary"
-  },
+  }
 }
