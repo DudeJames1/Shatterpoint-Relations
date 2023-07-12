@@ -191,11 +191,17 @@
     "interactions": [ "Inquisitorius" ],
     "unit_type": "Support"
   },
-  "Nightsisters Acolytes": {
+"Nightsisters Acolytes": {
     "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1687799945/unitcards/cw47je12yjplxsysormd.png",
     "keywords": [ "Dathomirian", "Nightsister", "Trooper" ],
     "interactions": [ "Dathomirian" ],
     "unit_type": "Support"
+  },
+"Savage Opress": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1689133069/unitcards/wiqlgevlz7fdkcujaj73.png",
+    "keywords": [ "Dathomirian", "Force User", "Sith", "Separatist Alliance" ],
+    "interactions": [ "Dathomirian", "Separatist Alliance", "Primary" ],
+    "unit_type": "Secondary"
   },
   "Jedi Master Mace Windu": {
     "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1688580601/unitcards/wl27we20haoojutet3jx.png",
