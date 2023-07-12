@@ -208,4 +208,5 @@
     "keywords": [ "Dathomirian", "Force User", "Sith", "Separatist Alliance" ],
     "interactions": [ "Dathomirian", "Separatist Alliance", "Primary" ],
     "unit_type": "Secondary"
-  }
+  },
+}
