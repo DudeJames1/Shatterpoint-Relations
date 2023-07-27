@@ -208,5 +208,17 @@
     "keywords": [ "Dathomirian", "Force User", "Sith", "Separatist Alliance" ],
     "interactions": [ "Dathomirian", "Separatist Alliance", "Primary" ],
     "unit_type": "Secondary"
+  },
+  "CT-411 Commander Ponds": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1689705095/unitcards/juhlzpdpwpjjq3mjtr1w.png",
+    "keywords": [ "Clone Commando", "Clone Trooper", "Galactic Republic" ],
+    "interactions": [ "Galactic Republic", "Clone Trooper" ],
+    "unit_type": "Secondary"
+  },
+  "ARF Clone Troopers": {
+    "picture": "https://res.cloudinary.com/tabletopadmiral/image/upload/f_auto/v1689705064/unitcards/lz94l1avql1hqfbknotu.png",
+    "keywords": [ "ARF", "Clone Trooper", "Galactic Republic", "Trooper" ],
+    "interactions": [ "Galactic Republic" ],
+    "unit_type": "Support"
   }
 }
